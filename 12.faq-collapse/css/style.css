@@ -27,7 +27,7 @@ h1 {
   padding: 30px;
   position: relative;
   overflow: hidden;
-  transition: 0.3s ease;/*CSS transition属性用于过渡效果*/
+  transition: 0.3s ease;/*CSS3(动画) transition属性用于过渡效果*/
 }
 
 .faq.active {
@@ -52,7 +52,7 @@ h1 {
   color: #3498db;
   top: -10px;
   left: -30px;
-  transform: rotateY(180deg);/*CSStransform属性允许你旋转，缩放，倾斜或平移给定元素*/
+  transform: rotateY(180deg);/*CSS3（动画）transform属性允许你旋转，缩放，倾斜或平移给定元素*/
 }
 
 .faq-title {
@@ -74,11 +74,11 @@ h1 {
   border-radius: 50%;
   cursor: pointer;/*cursor属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式*/
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;/* 设置侧轴的子元素排列方式（align-items---->单行） center（垂直居中）*/
+  justify-content: center;/*设置主轴的子元素排列方式 center（水平居中）*/
   font-size: 16px;
   padding: 0;
-  position: absolute;
+  position: absolute;/* 绝对定位 绝对定位会使元素脱离文档流 一般都是“子绝父相”定位方式*/
   top: 30px;
   right: 30px;
   height: 30px;

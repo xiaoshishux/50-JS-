@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Roboto',sans-serif;
-    display: flex;
+    display: flex; /* 设置flex布局 脱离文档流*/
     flex-direction: column; /* 设置主轴的方向 column（从上往下）*/
     align-items: center; /* 设置侧轴的子元素排列方式（align-items---->单行） center（垂直居中）*/
     justify-content: center; /*设置主轴的子元素排列方式 center（水平居中）*/
@@ -24,7 +24,7 @@ body{
     visibility: hidden; /* 指定元素是否可见  hidden---->元素不可见*/
 }
 .label{
-    position: relative;
+    position: relative;/*相对定位 注意，在使用相对定位时，无论是否进行移动，元素仍然占据原来的空间*/
     background-color: #d0d0d0;
     border-radius: 50px;
     cursor: pointer; /* 设置光标的形状  pointer（手指）*/
@@ -47,11 +47,12 @@ body{
     left: 3px;
     align-items: center;
     justify-content: center;
-    animation: slideOff 0.3s linear forwards;/* 动画属性 */
+    animation: slideOff 0.3s linear forwards;/* CSS3 动画属性 */
 }
 .toggle:checked+ .label .ball{
     animation: slideOn 0.3s linear forwards;
 }
+/* @keyframes的规则 */
 @keyframes slideOn{
     0%{
         transform: translateX(0) scale(1);
